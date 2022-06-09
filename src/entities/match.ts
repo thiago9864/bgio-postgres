@@ -16,6 +16,8 @@ export class Match extends Model {
   // log
   public log!: LogEntry[];
 
+  public stateHistory!: object[];
+
   // timestamps!
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
@@ -57,4 +59,8 @@ export const matchAttributes: ModelAttributes = {
   log: {
     type: DataTypes.JSON,
   },
+  // State History
+  stateHistory: {
+    type: DataTypes.JSON,
+  }
 };

@@ -118,6 +118,8 @@ export class PostgresStore extends Async {
             state,
             // 4. append deltalog to log if provided
             log: [...(match?.log ?? []), ...(deltalog ?? [])],
+            // Creates a state change history
+            stateHistory: [...(match?.stateHistory ?? []), (state ?? [])]
           },
           { transaction }
         );
