@@ -16,7 +16,7 @@ export class Match extends Model {
   // log
   public log!: LogEntry[];
 
-  public stateHistory!: object[];
+  public stateHistory!: State[];
 
   // timestamps!
   public readonly createdAt!: Date;
