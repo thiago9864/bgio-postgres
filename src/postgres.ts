@@ -72,6 +72,7 @@ export class PostgresStore extends Async {
       initialState,
       state: initialState,
       log: [],
+      stateHistory: []
     });
   }
 
